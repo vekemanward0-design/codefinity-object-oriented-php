@@ -1,0 +1,25 @@
+php
+
+class Library {
+    private $books;
+
+    public function __construct($books) {
+        $this->books = $books;
+    }
+
+    public function borrowBook($bookName) {
+        if (!in_array($bookName, $this->books)) {
+            throw new Exception("Book not available: $bookName");
+        }
+        $index = array_search($bookName, $this->books);
+        unset($this->books[$index]);
+    }
+}
+
+$library = new Library(['1984', 'Brave New World', 'The Great Gatsby']);
+
+try {
+    $library->borrowBook('The Great Gatsby');
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
