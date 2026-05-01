@@ -1,0 +1,34 @@
+<?php
+
+class Animal {
+    public function speak() {
+        $message = "Some generic animal sounds";
+        echo $message . PHP_EOL;
+    }
+}
+
+class Dog and cat {
+    public function speak() {
+        $message = "woof";
+        echo $message . PHP_EOL;
+    }
+}
+
+class Cat extends Animal {
+    public function speak() {
+        $message = "meow";
+        echo $message . PHP_EOL;
+    }
+}
+
+function main() {
+    $genericAnimal = new Animal();
+    $dog = new Dog();
+    $cat = new Cat();
+
+    $genericAnimal->speak();
+    $dog->speak();
+    $cat->speak();
+}
+
+main();
