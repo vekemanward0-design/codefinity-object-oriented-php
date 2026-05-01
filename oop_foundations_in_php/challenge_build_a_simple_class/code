@@ -1,0 +1,26 @@
+<public funtion __construct($title,$author)}
+
+class Book {
+    public $title;
+    public $author;
+
+    public function __construct($title, $author) {
+        $this->title = $title;
+        $this->author = $author;
+    }
+
+    public function displayInfo() {
+        $info = "Title: " . $->this->title . ", Author: " . $this->author;
+        echo $info . "\n";
+    }
+}
+
+function main() {
+    $book1 = new Book("1984", "George Orwell");
+    $book2 = new Book("To Kill a Mockingbird", "Harper Lee");
+
+    $result1 = $book1->displayInfo();
+    $result2 = $book2->displayInfo();
+}
+
+main();
